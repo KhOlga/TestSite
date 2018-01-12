@@ -1,0 +1,26 @@
+<?php
+    include(ROOT.DS.'views'.DS.'layouts'.DS.'default.phtml');
+?>
+
+<section id="navbar" class="embedded_content">
+    <a name="news"></a>
+    <div>
+        <?php foreach ($newsList as $newsItem) : ?>
+            <div>
+                <a name="newsList"></a>
+                <h2 class="ownCustomDate"><a href="<?php echo $newsItem['id'];?>"><?php echo $newsItem['title'];?></a></h2>
+                <p class="ownCustomDate"><?php echo $newsItem['date'];?></p>
+
+                <div class="entry">
+                    <p><?php echo $newsItem['short_content'];?></p>
+                </div>
+
+                <div class="meta">
+                    <p class="links"><a href="/news/<?php echo $newsItem['id']; ?>" class="comments">Read more...</a></p>
+                </div>
+
+            </div>
+        <?php endforeach; ?>
+    </div>
+</section>
+

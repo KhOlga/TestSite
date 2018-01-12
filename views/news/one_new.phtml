@@ -1,0 +1,24 @@
+<?php
+    include(ROOT.DS.'views'.DS.'layouts'.DS.'default.phtml');
+?>
+
+<section id="navbar">
+    <article id="content" class="embedded_content">
+        <a name="<?php $newsItem['id']; ?>" >
+            <h2 class="ownCustomDate">
+                <?php echo $newsItem['title']; ?>
+            </h2>
+        </a>
+        <p class="ownCustomDate">
+            <?php echo $newsItem['date']; ?>
+        </p>
+        <div class="entry">
+            <?php echo $newsItem['content']; ?>
+        </div>
+
+        <p class="links">
+            <a href="all_news.phtml" class="comments">Back to news list</a>
+        </p>
+    </article>
+</section>
+

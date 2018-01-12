@@ -1,0 +1,12 @@
+<?php
+    include(ROOT.DS.'views'.DS.'layouts'.DS.'default.phtml');
+?>
+
+<section>
+    <article>
+        <a name="<?php $result['id'];?>"><h2 class="ownCustomDate"><?php echo $result['title'];?></h2></a>
+        <p class="ownCustomDate"><?php echo $result['date'];?></p>
+        <div class="ownCustomPost"><?php echo $result['content']; ?></div>
+        <p class="links"><a href="lastnews.phtml" class="comments">Back to news list</a></p>
+    </article>
+</section>
